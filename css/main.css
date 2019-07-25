@@ -1,1 +1,195 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+body {
+  margin: 0;
+}
+
+.firstpage {
+  width: 100%;
+  height: 100vh;
+  background: url(/assets/bg1jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+.secondpage {
+  width: 100%;
+  height: 100vh;
+  background: url(/assets/bg2.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: 5px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.menu-toggle {
+  display: inline-block;
+  padding: .75em 15px;
+  line-height: 1em;
+  font-size: 1em;
+  color: #fff;
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+  color: #333;
+}
+
+/*
+   Default styles + Mobile first
+   Offscreen menu style
+  */
+.main-menu {
+  position: absolute;
+  display: none;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  -webkit-transition: left 0.3s ease, -webkit-box-shadow 0.3s ease;
+  transition: left 0.3s ease, -webkit-box-shadow 0.3s ease;
+  transition: left 0.3s ease, box-shadow 0.3s ease;
+  transition: left 0.3s ease, box-shadow 0.3s ease, -webkit-box-shadow 0.3s ease;
+  z-index: 999;
+}
+
+.main-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 2.5em 0 0;
+  /* Hide shadow w/ -8px while 'closed' */
+  -webkit-box-shadow: -8px 0 8px rgba(0, 0, 0, 0.5);
+  box-shadow: -8px 0 8px rgba(0, 0, 0, 0.5);
+  min-height: 100vh;
+  width: 100%;
+  background: #1a1a1a;
+}
+
+.main-menu a {
+  display: block;
+  padding: .75em 15px;
+  line-height: 1em;
+  font-size: 1em;
+  color: #fff;
+}
+
+.main-menu li a {
+  font-size: 30px;
+  text-decoration: none;
+}
+
+.main-menu li:last-child input {
+  background: transparent;
+  font-style: italic;
+  text-align: center;
+  color: #fff;
+  border: 0 0 1 1;
+  width: 50%;
+  height: 100%;
+}
+
+.main-menu a:hover,
+.main-menu a:focus {
+  color: #053df5;
+  text-decoration: none;
+}
+
+.main-menu .menu-close {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/*
+   On small devices, allow it to toggle...
+  */
+/*
+   :target for non-JavaScript
+   [aria-expanded] will be used if/when JavaScript is added to improve interaction, though it's completely optional.
+  */
+.main-menu:target,
+.main-menu[aria-expanded="true"] {
+  display: block;
+  left: 0;
+  outline: none;
+  -webkit-box-shadow: 3px 0 12px rgba(0, 0, 0, 0.25);
+  box-shadow: 3px 0 12px rgba(0, 0, 0, 0.25);
+}
+
+.main-menu:target .menu-close,
+.main-menu[aria-expanded="true"] .menu-close {
+  z-index: 1001;
+}
+
+.main-menu:target ul,
+.main-menu[aria-expanded="true"] ul {
+  position: relative;
+  z-index: 1000;
+}
+
+/* 
+   We could us `.main-menu:target:after`, but
+   it wouldn't be clickable.
+  */
+.main-menu:target + .backdrop,
+.main-menu[aria-expanded="true"] + .backdrop {
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 998;
+  background: #000;
+  background: rgba(0, 0, 0, 0.85);
+  cursor: default;
+}
+
+@supports (position: fixed) {
+  .main-menu,
+  .main-menu:target + .backdrop,
+  .main-menu[aria-expanded="true"] + .backdrop {
+    position: fixed;
+  }
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+header {
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+article {
+  padding: 30px;
+  width: 55em;
+  font-size: 16px;
+  line-height: 1.5em;
+}
+
+article h2 {
+  font-weight: 500;
+  font-size: 28px;
+}
+
+.logo {
+  margin: 0 70% 0 0;
+  font-size: 30px;
+  color: #fff;
+}
+/*# sourceMappingURL=main.css.map */
