@@ -2,8 +2,42 @@ body {
     margin: 0;
 }
 
+header {
+  width:100%;
+  padding: 1% 5% 1% 5%;
+  display: flex;
+  align-items: baseline;
+  font-size: 20px;
+  color: #fff;
+  position: fixed;
+}
+
+.header-alt {
+  color: #000;
+  background-color: #fff;
+}
+
+.logo {
+  margin: 0 2% 0 0;
+  width: 20%;
+}
+
+.fa {
+  margin: 0 5% 0 0;
+  color: #fff;
+}
+
+.scroll-color {
+  color:#000;
+}
+
+.scroll-border {
+  margin: 0 70% 0 0;
+}
+
 .firstpage {
     width: 100%;
+    margin: 0 0 2px 0;
     height: 100vh;
     background: url(/assets/bg1jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
@@ -20,36 +54,59 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-}
+  }
 
-.sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: 5px;
-    overflow: hidden;
-    clip: rect(0,0,0,0);
-    border: 0;
+  .grid-container {
+    display: inline-grid;
   }
-  
-  .menu-toggle {
-    display: inline-block;
-    padding: .75em 15px;
-    line-height: 1em;
-    font-size: 1em;
+
+  .main-content {
+    width:60%;
+    margin: 0 25% 0 15%;
+    text-align: center;
+    padding: 15% 0 0 0;
+    font-size: 35px;
     color: #fff;
+    
   }
-  
-  .menu-toggle:hover,
-  .menu-toggle:focus {
-    color: #333;
+
+  .main-nav {
+    width:70%;
   }
-  
-  /*
-   Default styles + Mobile first
-   Offscreen menu style
-  */
+
+  .showme {
+    display:visible;
+  }
+
+  .noshow {
+    display:hidden;
+  }
+
+  .main-nav ul {
+    list-style: none;
+    width:100%;
+  }
+ 
+  .main-nav li {
+    display: inline-block;
+    color: #000;
+    padding: 0 2% 0 0;
+  }
+
+  .main-nav li:last-child {
+    padding: 0 0 0 0;
+  }
+
+  .main-nav li a {
+    color:#000;
+    text-decoration: none;
+  }
+
+  .main-nav li a:hover,
+  .main-nav li a:focus {
+    color:#053df5;
+  }
+
   .main-menu {
     position: absolute;
     display: none;
@@ -82,6 +139,10 @@ body {
     font-size: 1em;
     color: #fff;
   }
+
+  .main-menu li {
+    padding: 0 0 2% 0;
+  }
   
   .main-menu li a {
     font-size: 30px;
@@ -90,10 +151,13 @@ body {
 
   .main-menu li:last-child input {
     background:transparent;
+    outline: none;
+    font-size: 30px;
     font-style: italic;
     text-align: center;
     color: #fff;
-    border: 0 0 1 1;
+    border: 0;
+    padding: 5%;
     width: 50%;
     height: 100%;
   }
@@ -109,6 +173,31 @@ body {
     right: 0;
     top: 0;
   }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: 5px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+  }
+  
+  .menu-toggle {
+    display: inline-block;
+    padding: .75em 15px;
+    line-height: 1em;
+    font-size: 1em;
+    color: #fff;
+  }
+  
+  .menu-toggle:hover,
+  .menu-toggle:focus {
+    color: #333;
+  }
+  
   
   /*
    On small devices, allow it to toggle...
@@ -170,12 +259,6 @@ body {
     box-sizing: border-box;
   }
   
-  header {
-    padding: 20px;
-    display: flex;
-    align-items: baseline;
-  }
-  
   article {
     padding: 30px;
     width: 55em;
@@ -188,8 +271,3 @@ body {
     font-size: 28px;
   }
   
-  .logo {
-    margin: 0 70% 0 0;
-    font-size: 30px;
-    color: #fff;
-  }
