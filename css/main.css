@@ -43,14 +43,14 @@ header {
   width: 100%;
   margin: 0 0 2px 0;
   height: 100vh;
-  background: url(/assets/bg1jpg) no-repeat center center fixed;
+  background: url(assets/bg1jpg) no-repeat center center fixed;
   background-size: cover;
 }
 
 .secondpage {
   width: 100%;
   height: 100vh;
-  background: url(/assets/bg2.jpg) no-repeat center center fixed;
+  background: url(assets/bg2.jpg) no-repeat center center fixed;
   background-size: cover;
 }
 
